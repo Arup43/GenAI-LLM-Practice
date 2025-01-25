@@ -1,9 +1,11 @@
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
+from dotenv import load_dotenv
 import os
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyA7e3kHqlBC6Liec9wRunVhlkL-OJEGJNQ"
+load_dotenv()
+
 
 model = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp", temperature=0.7)
 

@@ -1,4 +1,3 @@
-import os
 from langchain_google_genai import (
     ChatGoogleGenerativeAI,
     GoogleGenerativeAIEmbeddings  # Updated name
@@ -9,9 +8,10 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
+from dotenv import load_dotenv
+import os
 
-# Set API Key
-os.environ["GOOGLE_API_KEY"] = "AIzaSyA7e3kHqlBC6Liec9wRunVhlkL-OJEGJNQ"  # Replace with your key
+load_dotenv()
 
 # 1. Prepare Documents (create sample.txt first)
 # sample_text = """Paris is the capital of France. 

@@ -1,8 +1,8 @@
-import os
 from langchain_google_genai import ChatGoogleGenerativeAI
+from dotenv import load_dotenv
+import os
 
-# Set your Google API key (get it from https://makersuite.google.com/app/apikey)
-os.environ["GOOGLE_API_KEY"] = "AIzaSyA7e3kHqlBC6Liec9wRunVhlkL-OJEGJNQ"  # Replace with your actual API key
+load_dotenv()
 
 # Initialize the Gemini Pro model
 model = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp", temperature = 0.3)
